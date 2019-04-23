@@ -10,17 +10,19 @@
 
   <PropertyGroup Label="Package">
     <VersionPrefix>3.2.0</VersionPrefix>
-    <Authors>Muhammad Rehan Saeed (RehanSaeed.com)</Authors>
-    <Product>ASP.NET Core Framework Boxed</Product>
+    <Authors>David Hardin and Muhammad Rehan Saeed (RehanSaeed.com)</Authors>
+    <Product>Davihar Fork of ASP.NET Core Framework Boxed</Product>
     <Description>Provides ASP.NET Core middleware, MVC filters, extension methods and helper code for an ASP.NET Core project.</Description>
-    <Copyright>Copyright © Muhammad Rehan Saeed. All rights Reserved</Copyright>
+    <Copyright>Copyright © David Hardin and Muhammad Rehan Saeed. All rights Reserved</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/Dotnet-Boxed/Framework</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/davihar/Framework</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/Dotnet-Boxed/Templates/master/Images/Icon-256x256.png</PackageIconUrl>
-    <RepositoryUrl>https://github.com/Dotnet-Boxed/Framework.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/davihar/Framework.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>ASP.NET;ASP.NET Core;MVC;Boxed;Muhammad Rehan Saeed;Framework;Middleware;Filters</PackageTags>
-    <PackageReleaseNotes>https://github.com/Dotnet-Boxed/Framework/releases</PackageReleaseNotes>
+    <PackageTags>ASP.NET;ASP.NET Core;MVC;Boxed;David Hardin;Muhammad Rehan Saeed;Framework;Middleware;Filters</PackageTags>
+    <PackageReleaseNotes>https://github.com/Dotnet-Boxed/Framework/releases
+
+Reverted to ASP.NET Core 2.1</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Label="Signing">
@@ -38,14 +40,17 @@
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <AssemblyName>Davihar.Boxed.AspNetCore</AssemblyName>
+  </PropertyGroup>
+
   <ItemGroup Label="Package References">
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Rewrite" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Options.DataAnnotations" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Rewrite" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.1.0" />
     <PackageReference Condition="'$(OS)' == 'Windows_NT'" Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" Version="1.0.0-beta2-18618-05" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="StyleCop.Analyzers" PrivateAssets="All" Version="1.1.1-beta.61" />

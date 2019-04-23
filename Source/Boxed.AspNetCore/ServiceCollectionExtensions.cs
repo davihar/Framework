@@ -137,8 +137,8 @@
 
             services
                 .AddOptions<TOptions>()
-                .Bind(configuration)
-                .ValidateDataAnnotations();
+                .Bind(configuration);
+                // .ValidateDataAnnotations();
             return services.AddSingleton(x => x.GetRequiredService<IOptions<TOptions>>().Value);
         }
 
@@ -174,9 +174,9 @@
 
             services
                 .AddOptions<TOptions>()
-                .Bind(configuration)
-                .ValidateDataAnnotations()
-                .Validate(validation);
+                .Bind(configuration);
+                // .ValidateDataAnnotations()
+                // .Validate(validation);
             return services.AddSingleton(x => x.GetRequiredService<IOptions<TOptions>>().Value);
         }
 
@@ -219,9 +219,9 @@
 
             services
                 .AddOptions<TOptions>()
-                .Bind(configuration)
-                .ValidateDataAnnotations()
-                .Validate(validation, failureMessage);
+                .Bind(configuration);
+                // .ValidateDataAnnotations()
+                // .Validate(validation, failureMessage);
             return services.AddSingleton(x => x.GetRequiredService<IOptions<TOptions>>().Value);
         }
     }
